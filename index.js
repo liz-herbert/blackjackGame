@@ -15,6 +15,7 @@ let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
 
+// function to get a random card throughout the game
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
@@ -41,6 +42,7 @@ function renderGame() {
         cardsEl.textContent += cards[i] + " "
     }
     
+    //update html to show messages based on card sum
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
